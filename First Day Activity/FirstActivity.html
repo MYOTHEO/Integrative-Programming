@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: cyan;
+            }
+            .login-container {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+            }
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #555;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .login-btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .login-btn:hover {
+                background-color: #0056b3;
+            }
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Sign-in Form</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" placeholder="Enter your First Name">
+                </div>
+		<div class="form-group">
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" placeholder="Enter your Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="emailaddress">Email Address</label>
+                    <input type="text" id="emailaddress" placeholder="Enter your email address">
+                </div>
+                <button type="button" class="login-btn" onclick="showFullName()">Submit</button>
+                <div id="error-message" class="error">Please fill in all fields.</div>
+            </form>
+        </div>
+
+        <script>
+            function showFullName() {
+                // Get values from input fields
+                const firstname = document.getElementById("firstname").value.trim();
+                const lastname = document.getElementById("lastname").value.trim();
+		const emailaddress = document.getElementById("emailaddress").value.trim();
+
+                // Check if inputs are not empty
+                if (firstname === "" || lastname === "") {
+                    alert("Please enter both first name and last name.");
+                } else {
+                    // Show alert with the full name
+                    alert(`Email Address:${emailaddress}`);
+		    console.log(`Full Name: ${firstname} ${lastname} `);
+                }
+            }
+        </script>
+    </body>
+</html>
+

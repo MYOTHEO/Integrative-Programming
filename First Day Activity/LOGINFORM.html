@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+            .login-container {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+            }
+            .login-container h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #555;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .login-btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .login-btn:hover {
+                background-color: #0056b3;
+            }
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <button type="button" class="login-btn" onclick="validateLogin()">Login</button>
+                <div id="error-message" class="error">Please fill in all fields.</div>
+            </form>
+        </div>
+
+        <script>
+            function validateLogin() {
+                // Get the input values
+                const username = document.getElementById("username").value.trim();
+                const password = document.getElementById("password").value.trim();
+                const errorMessage = document.getElementById("error-message");
+
+                // Reset error message
+                errorMessage.style.display = "none";
+
+                // Check if username or password is empty
+                if (username === "" || password === "") {
+                    errorMessage.style.display = "block";
+                    errorMessage.textContent = "Please fill in all fields.";
+                    return;
+                }
+
+                // Example validation: check if username and password match predefined values
+                if (username === "admin" && password === "password123") {
+                    alert("Login successful!");
+                } else {
+                    errorMessage.style.display = "block";
+                    errorMessage.textContent = "Invalid username or password.";
+                }
+            }
+        </script>
+    </body>
+</html>
+

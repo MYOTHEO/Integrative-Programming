@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Form Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="font-family: Arial, sans-serif; margin: 20px;">
+
+        <h2>Enter Your Name</h2>
+        <form id="nameForm" style="max-width: 400px;">
+            <label for="firstName" style="display: block; margin-bottom: 5px;">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter first name" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <label for="lastName" style="display: block; margin-bottom: 5px;">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter last name" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <button type="button" onclick="showFullName()" style="padding: 10px 20px; font-size: 16px; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer;">Show Full Name</button>
+        </form>
+
+        <script>
+            function showFullName() {
+                // Get values from input fields
+                const firstName = document.getElementById("firstName").value.trim();
+                const lastName = document.getElementById("lastName").value.trim();
+
+                // Check if inputs are not empty
+                if (firstName === "" || lastName === "") {
+                    alert("Please enter both first name and last name.");
+                } else {
+                    // Show alert with the full name
+                    alert(`Full Name: ${firstName} ${lastName}`);
+                }
+            }
+        </script>
+    </body>
+</html>

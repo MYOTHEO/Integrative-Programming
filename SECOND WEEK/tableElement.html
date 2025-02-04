@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            border: 2px solid black;
+        }
+        td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>subj_code</th>
+            <th>subj_name</th>
+            <th>subj_units</th>
+            <th>subj_prof</th>
+            <th>subj_room</th>
+            <th>subj_sched</th>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td rowspan="3">IT 102</td>
+                <td>INTEGRATIVE</td>
+                <td>3.0</td>
+                <td>Sir De Guzman</td>
+                <td>Com Lab 5</td>
+                <td colspan="2">Tuesday 8 am -  1pm</td>
+            </tr>
+            <tr>
+                <!--<td>PE 4</td>-->
+                <td colspan="3">SPORTS</td>
+                <!--<td>2.0</td>
+                <td>Sir Dunghit</td>-->
+                <td>RH 407</td>
+                <td>Wed 7am</td>
+            </tr>
+            <tr>
+                <td>CISCO 2</td>
+                <td>Routing and Networking</td>
+                <td>3.0</td>
+                <td>Sir Jesse</td>
+                <td>Lab 2</td>
+            </tr>
+        </tbody>
+
+
+        <tfoot>
+            <tr>
+                <th>subj_code</th>
+                <th>subj_name</th>
+                <th>subj_units</th>
+                <th>subj_prof</th>
+                <th>subj_room</th>
+                <th>subj_sched</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

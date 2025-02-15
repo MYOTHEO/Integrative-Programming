@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Validation</title>
+    <style>
+        /* General body styling */
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #00c6ff, #00fff2);
+            margin: 0;
+        }
+        /* Card container */
+        
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        /* Title styling */
+        
+        h2 {
+            color: #58c3bd;
+            margin-bottom: 15px;
+        }
+        /* Input field styling */
+        
+        input {
+            width: 93%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        /* Button styling */
+        
+        button {
+            width: 100%;
+            background: #08b5d8;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        /* Button hover effect */
+        
+        button:hover {
+            background: #00a2ff;
+        }
+        /* Login message styling */
+        
+        #loginMessage {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            opacity: 0;
+            /* Initially hidden */
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth fade-in effect */
+        }
+        /* Fade-in animation */
+        
+        .fade-in {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login Validation</h2>
+        <label for="username"> </label>
+        <input type="text" id="username" placeholder="Enter username">
+        <label for="password"> </label>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="validateLogin()">Login</button>
+        <p id="loginMessage"></p>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const VALID_USERNAME = "adminuser";
+            const VALID_PASSWORD = "12345678";
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const messageElement = document.getElementById("loginMessage");
+
+            // Remove class to reset animation
+            messageElement.classList.remove("fade-in");
+
+            // Set opacity to 0 before updating text
+            messageElement.style.opacity = "0";
+
+            // Short delay ensures the animation will restart
+            setTimeout(() => {
+                if (username === VALID_USERNAME && password === VALID_PASSWORD) {
+                    messageElement.innerText = "Login Successful!";
+                    messageElement.style.color = "green";
+                } else {
+                    messageElement.innerText = "Invalid Username or Password.";
+                    messageElement.style.color = "red";
+                }
+
+                // Apply fade-in effect
+                messageElement.classList.add("fade-in");
+            }, 10); // Small delay forces animation to restart
+        }
+    </script>
+
+</body>
+
+</html>

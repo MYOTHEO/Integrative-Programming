@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JS Example </title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            console.log('HELLO');
+
+            var section_name = "2a";
+            let number_of_students = 37;
+            const course = "BSIT";
+
+            let schedule = true;
+
+            console.log(section_name);
+            console.log(number_of_students);
+            console.log(course);
+            console.log(schedule);
+
+            let student_name = ["ivan","fer","mark","mey", "lloyd"];
+            console.log(student_name);
+            
+            // course = "BSCS"; // this is a comment
+            // console.log(course);
+
+            function displayName(){
+
+                let fullName = "Osita, John Matthew E.";
+                console.log(fullName);
+            }
+
+            displayName();
+
+            function add_name(firstName, lastname){
+
+                console.log(firstName + " " + lastname); // This is a concatenation
+            }
+            add_name("John Matthew", "Osita");
+
+            // LAST EXAMPLE
+            function me_and_my_crush(my_name, crush_name){
+                
+                let forever = my_name + " <3 " + crush_name;
+                return forever;
+            }
+
+            let forever = me_and_my_crush("mat","sheshe");
+            console.log(forever);
+
+        </script>
+    </body>
+</html>

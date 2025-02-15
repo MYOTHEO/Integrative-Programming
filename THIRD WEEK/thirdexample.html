@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Example 3 </title>
+    </head>
+    <body>
+
+        <script>
+            // Logical Operators
+            /*
+            equals to (=) -> variable
+            is equals to(==) -> used for checking
+            (===) -> used to verify if the same data type(true, false)
+            (!=) -> not equal
+            (!==) -> not equal, but with data tyoe(str !==1st)
+            (>) -> greater than
+            (<) -> less than
+            (>=) -> greater than or equal to
+            (<=) -> less than than or equal to
+
+            LOGICAL OPERATORS
+            || - or
+            && - and
+            !
+
+            ASSIGNMENT OPERATORS
+            =
+            +=
+            -=
+            *=
+            /=
+            %=
+            
+            */
+
+            // GRADE IF ELSE
+            let grade = 8;
+
+    
+            if(grade >= 100 && grade >= 98){
+
+                console.log("Grade is 1.00");
+            }
+            else if(grade <= 97 && grade >= 95){
+
+                console.log("grade is 1.25");
+            }
+            else if(grade <= 94 && grade >= 92){
+
+                console.log("grade is 1.50");
+            }
+            else if(grade <= 91 && grade >= 86){
+
+                console.log("grade is 1.75");
+            }
+            else{
+
+                console.log("There is no grade equivalent");
+            }
+
+            // NAME IF ELSE
+            let lastname = "Pogi";
+            let age = "18"
+
+            if (lastname == "Osita" || age === "18"){
+
+                console.log("Last name or age is correct");
+
+            }
+            else{
+
+                console.log("Last name is not identified")
+            }
+            // Password If else
+            
+            /*
+            let tries = 5;
+
+			for (var i = 0 ; i < 5; i++) {
+
+				let username = prompt("Enter Username: ");
+				let password = prompt("Enter Passwords: ");
+
+				if(username != "" && password != ""){
+
+					if(username === "Kaizuka00!"){
+
+						if(password === "admin123456789"){
+
+							console.log('username and password is verified');
+							break;
+
+						} else {
+
+							console.log('password is wrong.');
+
+							let userInput = prompt("Do you want to try again [Y]/[N]:");
+
+							if(userInput == 'Y'){
+
+								tries--;
+								continue;
+
+							} else if( userInput == 'N' ) {
+								console.log('Login is not successful.');
+								break;
+
+							}
+
+						}
+
+					} else {
+
+						console.log('username is wrong.');
+						
+						let userInput = prompt("Do you want to try again [Y]/[N]:");
+
+						if(userInput == 'Y'){
+
+							tries--;
+							continue;
+
+						} else if( userInput == 'N' ) {
+							console.log('Login is not successful.');
+							break;
+
+						}
+					}
+
+				} else {
+
+					console.log('Username or password is empty.');
+
+					let userInput = prompt("Do you want to try again [Y]/[N]:");
+
+					if(userInput == 'Y'){
+
+						tries--;
+						continue;
+
+					} else if( userInput == 'N' ) {
+						console.log('Login is not successful.');
+						break;
+
+					}
+
+				}
+
+			}
+            */
+        </script>
+    </body>
+</html>

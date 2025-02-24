@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Example 4</title>
+	</head>
+	<body>
+
+        <button id="btn1" name="buttons">Click Me</button>
+        <img id="myImage" src="c2nared.jpg" width="200">
+
+
+        <p id="text">Hello, I am visible!</p>
+        <button id="toggleBtn">Hide</button>
+
+		<script>
+            // Inline Events in JavaScript
+            document.getElementById("btn1").onclick = function() {
+                alert("Button clicked!");
+            };
+
+            document.getElementById("myImage").onclick = function() {
+                if (this.src.includes("c2nayellow.avif")) {
+                    this.src = "c2nared.jpg";
+                } else {
+                    this.src = "c2nayellow.avif";
+                }
+            };
+
+            document.getElementById("toggleBtn").onclick = function(){
+                let text = document.getElementById("text");
+                text.style.display = text.style.display === "none" ? "block" : "none"
+            }
+		</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Simple GUI Calculator</title>
+	</head>
+	<body>
+
+        <input type="text" id="fnumber" placeholder="Enter 1st number">
+
+        <input type="text" id="snumber" placeholder="Enter 2nd number">
+
+        <input type="text" id="result" placeholder="Result will be displayed" readonly>
+
+        <button id="add"> + </button>
+        <button id="sub"> - </button>
+        <button id="mult"> * </button>
+        <button id="divi"> / </button>
+        <button id="expo"> ** </button>
+        <button id="modu"> % </button>
+
+      	<script>
+                // addition
+                document.getElementById("add").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum + snum;
+                });
+                // subtraction
+                document.getElementById("sub").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum - snum;
+                });
+                // multiplication
+                document.getElementById("mult").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum * snum;
+                });
+                // division
+                document.getElementById("divi").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum / snum;
+                });
+                // exponentiation
+                document.getElementById("expo").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum ** snum;
+                });
+                // modulo
+                document.getElementById("divi").addEventListener("click", function(){
+                    let fnum = parseFloat(document.getElementById("fnumber").value);
+                    let snum = parseFloat(document.getElementById("snumber").value);
+                    document.getElementById("result").value = fnum % snum;
+                });
+		</script>
+
+	</body>
+</html>

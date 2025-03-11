@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Selection Example</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f4f4;
+                color: #333;
+                line-height: 1.6;
+            }
+            .container {
+                width: 90%;
+                max-width: 1000px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            header {
+                text-align: center;
+                padding: 20px 0;
+            }
+            h1 {
+                color: #222;
+            }
+            .main-content {
+                margin-top: 20px;
+                padding: 15px;
+                background: #e3f2fd;
+                border-radius: 5px;
+            }
+            .content {
+                margin-bottom: 10px;
+                color: #555;
+            }
+            .sidebar {
+                background: #ffeb3b;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            .info-box {
+                background: white;
+                padding: 10px;
+                margin-top: 10px;
+                border-left: 5px solid #ff9800;
+                border-radius: 3px;
+            }
+            form {
+                background: #fff3e0;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            input, select {
+                width: 100%;
+                padding: 8px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .btn {
+                display: inline-block;
+                background: #007BFF;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .btn:hover {
+                background: #0056b3;
+            }
+            .footer {
+                background: #222;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            .questions {
+                background: #fff;
+                padding: 15px;
+                margin-top: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .question {
+                font-weight: bold;
+                color: #d32f2f;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="main-title">Welcome to the DOM Demo</h1>
+                <p class="content">This page contains multiple elements to practice JavaScript selection.</p>
+            </header>
+
+            <section class="main-content">
+                <h2>Article Section</h2>
+                <p class="content">First paragraph with class 'content'.</p>
+                <p class="content">Second paragraph with class 'content'.</p>
+            </section>
+
+            <aside class="sidebar">
+                <h3>Sidebar Section</h3>
+                <div class="info-box">Some sidebar information.</div>
+                <div class="info-box">Another info box.</div>
+            </aside>
+
+            <section>
+                <h2>Form Section</h2>
+                <form id="user-form">
+                    <label>First Name: <input type="text" name="fname" id="fname"></label><br>
+                    <label>Last Name: <input type="text" name="lname" id="lname"></label><br>
+                    <label>Gender:
+                        <select name="gender" id="gender">
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </label><br>
+                    <button type="button" class="btn" id="submit-btn">Submit</button>
+                </form>
+            </section>
+
+            <footer class="footer">
+                <p>Contact us at <span id="contact-email">info@example.com</span></p>
+                <button class="btn">Click Me</button>
+                <button class="btn">Another Button</button>
+            </footer>
+        </div>
+
+            <div class="questions">
+                <p class="question">What is the **first element** inside the 'body' tag?</p>
+                <p class="question"> What are **all elements** with the class "content"?</p>
+                <p class="question"> How many "div" elements are on this page?</p>
+                <p class="question"> What is the **first button** found using `querySelector(".btn")`?</p>
+                <p class="question"> What are **all buttons** found using `querySelectorAll(".btn")`?</p>
+            </div>
+        </body>
+        <script>
+            
+            let answer_1 = document.querySelector("body");
+            console.log("answer 1: " , answer_1.firstElementChild);
+
+            let answer_2 = document.getElementsByClassName("content");
+            console.log("answer 2: " , answer_2);
+
+            let answer_2_1 = document.querySelectorAll(".content");
+            console.log("answer 2.1: " , answer_2_1);
+
+            let answer_3 = document.getElementsByClassName(".div");
+            console.log("answer 3: " , answer_3.length);
+
+            let answer_3_1 = document.querySelectorAll("div");
+            console.log("answer 3: " , answer_3_1.length);
+
+            let answer_4 = document.getElementsByClassName(".btn");
+            console.log("answer 4: " , answer__4);
+
+            let answer_5 = document.getElementsByClassName(".btn");
+            console.log("answer 5: " , answer__5);
+        </script>
+    </html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Website Example with Inputs</title>
+    <style>
+        .container {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .header {
+            font-size: 24px;
+            color: #333;
+        }
+        .section {
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        #unique {
+            font-weight: bold;
+        }
+        .primary-text {
+            font-size: 16px;
+            color: #000;
+        }
+        .secondary-text {
+            font-size: 14px;
+            color: #555;
+        }
+        .blue-bg {
+            background-color: #ADD8E6;
+        }
+        .red-text {
+            color: red;
+        }
+        .green-text {
+            color: green;
+        }
+        .large-text {
+            font-size: 20px;
+        }
+        .small-text {
+            font-size: 12px;
+        }
+        .important {
+            font-weight: bold;
+            color: darkorange;
+        }
+        .link {
+            text-decoration: underline;
+            color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        input, select, button {
+            margin: 10px 0;
+        }
+        label {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header">Welcome to My Extended Website</h1>
+        </header>
+
+        <div class="section highlight">
+            <p class="text primary-text">This is some primary text in the first section.</p>
+            <p class="text secondary-text">This is some secondary text in the first section.</p>
+        </div>
+
+        <div class="section blue-bg">
+            <p class="text green-text">This is some green text in the second section.</p>
+            <p class="text red-text">This is some red text in the second section.</p>
+        </div>
+
+        <div class="section">
+            <p class="text large-text">This is large text in the third section.</p>
+            <p class="text small-text">This is small text in the third section.</p>
+        </div>
+
+        <div class="footer" id="unique">
+            <p class="important">Footer content with an ID of 'unique'.</p>
+            <a href="#" class="link">This is a link in the footer.</a>
+        </div>
+
+        <!-- Form Section with Inputs, Labels, and Button -->
+        <div class="form-container">
+            <h2>Form Section</h2>
+            <form action="#">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="input-field" placeholder="Enter your name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="input-field" placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" class="input-field" placeholder="Enter your age">
+                </div>
+                <div>
+                    <label for="country">Country:</label>
+                    <select id="country" class="input-field">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" id="submit-button" class="button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="section">
+            <p class="text">Another section with some text.</p>
+        </div>
+
+        <div class="section red-text">
+            <p class="text">This is a section with red text.</p>
+        </div>
+
+        <div class="footer">
+            <p class="text">Additional footer content.</p>
+        </div>
+
+        <div class="container">
+            <h2 class="header">More Sections</h2>
+            <div class="section">
+                <p class="text primary-text">Text in an additional section with primary text.</p>
+            </div>
+            <div class="section">
+                <p class="text green-text">This section has green text.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to answer the questions below
+
+        // Question 1: What is the 1st element selected using document.getElementById("unique")?
+        let answer_1 = document.getElementById("unique");
+        console.log("answer 1: " , answer_1);
+
+        // Question 2: How many elements with the class name 'text' exist in the document?
+        let answer_2 = document.getElementsByClassName("text");
+        console.log("answer 2: " , answer_2.length);
+
+        // Question 3: How many <p> tags are there in the document?
+        let answer_3 = document.getElementsByTagName("p");
+        console.log("answer 3: " , answer_3.length);
+
+        // Question 4: Select the first element with the class 'highlight' using querySelector
+        let answer_4 = document.querySelector(".highlight");
+        console.log("answer 4: " , answer_4);
+
+        // Question 5: Select all elements with the class 'text' using querySelectorAll
+        let answer_5 = document.querySelectorAll(".text");
+        console.log("answer 5: " , answer_5);
+
+        // Question 6: Select the first input field with class 'input-field'
+        let answer_6 = document.querySelector(".input-field");
+        console.log("answer 6: " , answer_6);
+
+        // Question 7: How many elements with the class 'input-field' exist in the document?
+        let answer_7 = document.getElementsByClassName("input-field");
+        console.log("answer 7: " , answer_7.length);
+
+        // Question 8: Select all input elements using querySelectorAll
+        let answer_8 = document.querySelectorAll("input");
+        console.log("answer 8: " , answer_8);
+
+        // Question 9: Select the first button with the id 'submit-button'
+        let answer_9 = document.querySelector("#submit-button");
+        console.log("answer 9: " , answer_9);
+
+        // Question 10: How many labels exist in the document?
+        let answer_10 = document.getElementsByTagName("label");
+        console.log("answer 10: " , answer_10.length);
+        
+
+        
+    </script>
+</body>
+</html>
